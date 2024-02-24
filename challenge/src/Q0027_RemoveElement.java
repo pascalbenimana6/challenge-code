@@ -1,15 +1,10 @@
 public class Q0027_RemoveElement {
     public int removeElement(int[] nums, int val){
-
-        int k = nums.length;
-        for(var i=0; i<k; i++){
-            if(nums[i] == val) {
-                while(nums[k-1] == val)
-                    k--;
-                nums[i] = nums[k-1];
-                nums[k-1] = val;
-                k--;
-            }
+        int n= nums.length;
+        int k = 0;
+        for(var i=0; i<n; i++){
+            if(nums[i]!=val)
+                nums[k++] = nums[i];
         }
         return k;
     }
